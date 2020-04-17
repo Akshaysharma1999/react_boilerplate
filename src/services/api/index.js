@@ -1,5 +1,10 @@
 import axios from 'axios'
+import interceptors from '../../utils/interceptors'
 
-export default axios.create({
+const api = axios.create({
     baseURL:"https://reqres.in/api/"   
 })
+
+interceptors(api)
+
+export default api
